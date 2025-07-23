@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Make <body> a flex container with a vertical layout */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make <main> a flex container with a horizontal layout and auto sizing */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+/* Allocate 2 parts of available space to <article> and enable vertical scrolling */
+article {
+  flex: 2;
+  overflow-y: auto;
+}
+
+/* Allocate 1 part of available space to <aside> and enable vertical scrolling */
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
