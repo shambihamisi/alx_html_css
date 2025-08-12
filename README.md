@@ -1,1 +1,1 @@
-# alx_html_css
+# This is my first HTML/CSS project of building a web page from scratch
