@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Headphones Website Design</title>
+
+     <!---font links-->
+     <link href="https://fonts.cdnfonts.com/css/spin-cycle" rel="stylesheet">
+     <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
+
+     <!--custom css file link-->
+     <link rel="stylesheet" href="0-styles.css">
+
+
+
+    </head>
+    <body>
+        <!--Header section-->
+        <header>
+            <div class="logo-image">
+            <a href="0-index.html"><img src="images/logo_headphones.png" alt="Headphones logo"></a>
+            </div>
+
+            <nav class="navbar">
+                <a href="Home">Home</a>
+                <a href="About Us">About Us</a>
+                <a href="Contact">Contact</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="bars"></i>
+            </div>
+
+            <div class="dropdown_menu open">
+                <a href="Home">Home</a>
+                <a href="About Us">About Us</a>
+                <a href="Contact">Contact</a>
+            </div>
+
+
+        </header>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function() {
+                dropDownMenu.classList.toggle('open')
+            }
+        </script>
+        
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
