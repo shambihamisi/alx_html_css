@@ -22,7 +22,7 @@
 html{
     font-size: 64%;
     overflow-x: hidden;
-    scroll-padding-top: 5.5 rem;
+    scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
 
@@ -42,6 +42,12 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 999;
+}
+
+header .navbar {
+  margin-left: auto; /* pushes links to the far right */
+  display: flex;
+  gap: 1rem;
 }
 
 header .navbar a{
@@ -73,8 +79,39 @@ header .icons i:hover{
     background: var(--primary);
     transform: rotate(360deg);
 }
-
-
+ /*--Header text--*/
+ .header-text{
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(300px);
+    text-align: center;
+ }
+ .header-text h1{
+    font-size: 70px;
+ }
+.header-text p{
+    font-size: 15px;
+    margin: 10px 0 40px;
+    color: #ffffff;
+}
+.call-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 2rem;
+    padding: 12px 30px;
+    position: relative;
+    cursor: pointer;
+    background: #FF6565;
+    font-size: 20px;
+}
+.para-text{
+    padding-top: 100px;
+}
 
 
 
@@ -94,23 +131,20 @@ header .icons i:hover{
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: .5rem;
     border-radius: 1rem;
-    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown_menu.open{
-    height: 100px;
+    transition: height .25s ease;
+    will-change: height;
+    height: 0;
 }
 
 .dropdown_menu a{
-    padding: .2rem;
+    padding: .8rem 1rem;
     border-radius: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .dropdown_menu a:hover{
@@ -118,13 +152,23 @@ header .icons i:hover{
     background: var(--primary);
 }
 
+header .icons i{
+        display: none;
+}
+
 
 /*--RESPONSIVE DESIGN--*/
-@media(max-width: 800px) {
+@media(max-width: 840px) {
     .logo-image img{
         width: 100px;
         height: auto;
     }
+    .header-text h1{
+    font-size: 20px;
+ }
+ .header-text p{
+    font-size: 10px;
+ }
 }
 
 @media(max-width: 750px) {
@@ -139,5 +183,4 @@ header .icons i:hover{
     .dropdown_menu{
         display: block;
     }
-
 }

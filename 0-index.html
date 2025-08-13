@@ -24,32 +24,39 @@
             </div>
 
             <nav class="navbar">
-                <a href="Home">Home</a>
-                <a href="About Us">About Us</a>
-                <a href="Contact">Contact</a>
+                <a href="Home">what we do</a>
+                <a href="About Us">our results</a>
+                <a href="Contact">contact us</a>
             </nav>
 
             <div class="icons">
                 <i class="fas fa-bars" id="bars"></i>
             </div>
 
-            <div class="dropdown_menu open">
-                <a href="Home">Home</a>
-                <a href="About Us">About Us</a>
-                <a href="Contact">Contact</a>
+            <div class="dropdown_menu">
+                <a href="Home">what we do</a>
+                <a href="About Us">our results</a>
+                <a href="Contact">contact us</a>
             </div>
+        <div class="header-text">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar libero in vulputate fringilla.</p>
+            <a href="action-btn" class="call-btn">CALL TO ACTION</a>
+        <div class="para-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar libero in vulputate fringilla. <br>Sed sollicitudin pharetra tellus, in rhoncus velit. 
+                Phasellus at sem eleifend, pretium purus et, imperdiet mauris. <br>Sed gravida lectus a luctus cursus. 
+                Proin semper erat sed neque consectetur posuere.</p>
+        </div>
+        </div>
 
 
         </header>
 
         <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
-
-            toggleBtn.onclick = function() {
-                dropDownMenu.classList.toggle('open')
-            }
+            const b=document.getElementById('bars'),m=document.querySelector('.dropdown_menu');
+            b.onclick=()=>{let o=m.style.height==='0px'||!m.style.height;m.style.height=o?m.scrollHeight+'px':'0px';b.classList.toggle('fa-times',o);b.classList.toggle('fa-bars',!o)};
+            window.onresize=()=>{if(window.innerWidth>750)m.style.height='';else m.style.height='0px'};
+            m.style.height='0px';b.classList.add('fa-bars');
         </script>
         
 
