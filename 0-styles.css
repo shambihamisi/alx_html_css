@@ -27,21 +27,29 @@ html{
 }
 
 body{
-    height: 100vh;
+    background: var(--light);
+    margin: 0;
+    padding: 0;
+}
+
+.header{
     background-image: url(images/headphones_hero_1.jpg);
     background-size: cover;
     background-position: center;
-}
-
-header{
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: none;
-    padding: 1rem 7%;
-    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 1rem 7% 8rem;
     align-items: center;
     justify-content: space-between;
-    z-index: 999;
+    min-height: 100vh;
+}
+.header > header{
+  position: relative;
+  z-index: 999;                   /* keep above overlay */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 header .navbar {
@@ -97,6 +105,8 @@ header .icons i:hover{
     font-size: 15px;
     margin: 10px 0 40px;
     color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .call-btn{
     display: inline-block;
@@ -109,14 +119,15 @@ header .icons i:hover{
     background: #FF6565;
     font-size: 20px;
 }
+.call-btn:hover{
+    color: #ffffff;
+    background: #a81414;
+}
 .para-text{
     padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-
-
-
-
 
 /*--Dropdown menu--*/
 .dropdown_menu{
@@ -156,6 +167,121 @@ header .icons i{
         display: none;
 }
 
+/*--What we do--*/
+.whatwedo{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.whatwedo h1{
+    font-size: 50px;
+    font-weight: 1000;
+    margin-bottom: 4rem;
+}
+.whatwedo p{
+    font-size: 20px;
+    margin-bottom: 6rem;
+    font-weight: 300;
+    color: #666666;
+}
+
+/*--wwd icons&grid--*/
+.wwd-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem 3rem;
+}
+
+.wwd-item h3{
+    font-size: 1.6rem;
+    margin: 1.2rem 0.6rem;
+    font-weight: 700;
+}
+
+.wwd-item p{
+    font-size: 1.4rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/*--icon style--*/
+.wwd-icon{
+    display: inline-grid;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    color: var(--primary);
+}
+
+
+/*--our results--*/
+.our-results{
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 1rem 7% 8rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh;
+}
+.our-results h1{
+    font-size: 50px;
+    font-weight: 1000;
+    margin-bottom: 4rem;
+    margin-top: 8rem;
+    color: #ffffff;
+    text-align: center;
+}
+.our-results p{
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    color: #d6d6d6;
+    text-align: center;
+    line-height: 2;
+}
+
+/*--or grid&badges--*/
+.or-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 4rem;
+}
+.badge{
+    width: 140px;
+    height: 160px;
+    margin: 0 auto;
+    background: var(--primary);
+    clip-path: polygon(50% 0, 95% 36%, 80% 88%, 20% 88%, 5% 36%);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    justify-items: center;
+    padding: 1.2rem 1rem 1.6rem;
+    box-shadow: var(--box-shadow);
+}
+.badge-value{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: none;
+}
+.badge-label{
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-transform: none;
+}
+
+
+
+
+
 
 /*--RESPONSIVE DESIGN--*/
 @media(max-width: 840px) {
@@ -164,10 +290,21 @@ header .icons i{
         height: auto;
     }
     .header-text h1{
-    font-size: 20px;
+    font-size: 40px;
  }
  .header-text p{
-    font-size: 10px;
+    font-size: 20px;
+ }
+ .para-text p{
+    font-size: 15px;
+ }
+
+ .call-btn{
+    font-size: 20px;
+    padding: 6px 15px;
+ }
+ .wwd-grid{ 
+    grid-template-columns: repeat(2, 1fr);
  }
 }
 
@@ -182,5 +319,11 @@ header .icons i{
 
     .dropdown_menu{
         display: block;
+    }
+    .wwd-grid{
+        grid-template-columns: 1fr;
+    }
+    .whatwedo{
+        padding: 5rem 1.6rem;
     }
 }
